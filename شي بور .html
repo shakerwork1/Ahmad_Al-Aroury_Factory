@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شي بورد - مصنع أحمد العاروري</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .header {
+      background-color: #b82424;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      line-height: 1.8;
+    }
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    /* ====== Image Gallery ====== */
+    .image-gallery {
+      text-align: center;
+    }
+
+    .image-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-grid img {
+      width: 280px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+
+     .whatsapp-footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .footer-bar {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0;
+      background-color: #333;
+      margin: 0;
+    }
+
+    .about-section {
+      flex: 2;
+      min-width: 300px;
+      padding: 15px;
+      text-align: right;
+    }
+
+    .whatsapp-contacts, 
+    .instagram-contacts,
+    .facebook-contacts,
+    .lcaion-contacts {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .contact-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .whatsapp-buttons,
+    .instagram-buttons,
+    .facebook-buttons,
+    .lcaion-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      width: fit-content;
+    }
+
+    .instagram-btn {
+      background-color: #6d028a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      width: fit-content;
+    }
+
+    .facebook-btn {
+      background-color: #0222b2;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      width: fit-content;
+    }
+
+    .lcaion-btn {
+      background-color: #851b06;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      width: fit-content;
+    }
+
+    .whatsapp-btn:hover,
+    .instagram-btn:hover,
+    .facebook-btn:hover,
+    .lcaion-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-btn span,
+    .instagram-btn span,
+    .facebook-btn span,
+    .lcaion-btn span {
+      padding-right: 5px;
+    }
+
+    /* متجاوب مع الجوال */
+    @media (max-width: 768px) {
+      .image-grid img {
+        width: 90%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-section,
+      .whatsapp-contacts,
+      .instagram-contacts,
+      .facebook-contacts,
+      .lcaion-contacts {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .whatsapp-buttons,
+      .instagram-buttons,
+      .facebook-buttons,
+      .lcaion-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Logo in top right corner -->
+  <a href="مصنع.html" class="top-left-image">
+    <img src="c:\Users\NTC\Downloads\1752743109733.png" alt="شعار المصنع"
+      style="width: 300px; height: auto; position: absolute; top: 0; right: 0;">
+  </a>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="header">
+      <h1>شي بورد من مصنع أحمد العاروري</h1>
+      <p>جودة عالية، سماكات متعددة، وسعر رهيب!</p>
+    </div>
+
+    <div class="section">
+      <h2>من نحن</h2>
+      <p>
+        نحن مصنع أحمد العاروري، رواد في صناعة إكسسوارات الديكور. نقدم لكم  شي بورد عالي الجودة تستخدم في العديد من
+        المجالات، مصممة لتجمع بين المتانة والمظهر الجمالي.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>💡 الشي بورد – قوة الأداء وأناقة التشطيب 💡</h2>
+      <p>
+        ارتقِ بتشطيبات مشروعك إلى مستوى جديد من المتانة والجمال مع الشي بورد، الحل العصري الذي يجمع بين الصلابة، مقاومة
+        العوامل الجوية، وسهولة التشكيل.
+
+
+      </p>
+    </div>
+    <div class="section">
+      <h2>📍 أين يمكن تركيب الشي بورد؟
+      </h2>
+      <h3>يتميّز الشي بورد بمرونته العالية ويُستخدم في العديد من الأماكن، أبرزها:</h3>
+      <ul>
+        <li> 🏠 الجدران الداخلية والخارجية</li>
+        <li> 🛁 الحمامات والمطابخ (مقاوم للرطوبة)</li>
+        <li>🏢 واجهات المباني </li>
+        <li>🧱 الأسقف المعلقة</li>
+        <li>🪵 الأرضيات تحت السيراميك</li>
+        <li>🎨 الديكورات الحديثة والتكسية المعمارية</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>⚙️ يُركّب الشي بورد على:
+      </h2>
+      <ul>
+        <li> 🔩 هياكل معدنية مجلفنة (زوايا، مسارات، أعمدة)</li>
+        <li> 🧱 جدران خرسانية</li>
+        <li> 🪵 ألواح خشبية مهيأة</li>
+        <li> 🧰 يمكن استخدامه مع معاجين مخصصة، مسامير خاصة، ومواد لاصقة مقاومة للرطوبة والحريق</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>🌍 أين ينتشر استخدامه؟</h2>
+      <h3>الشي بورد منتشر بشكل واسع في:</h3>
+      <p>📌 الفلل والمنازل الحديثة<br>
+        📌 المشاريع التجارية والمولات<br>
+        📌 الفنادق والمستشفيات<br>
+        📌 المدارس والمباني الحكومية<br>
+        📌 المطاعم والمقاهي التي تتطلب تشطيب عالي الجودة</p>
+
+    </div>
+    <div class="section">
+      <h2>🛠️ لماذا نحن الخيار الأفضل؟</h2>
+      <p>🔧 نوفّر لك منتج شي بورد عالي الجودة<br>
+        👷‍♂️ مع فريق تركيب متخصص<br>
+        ⏱️ تنفيذ سريع<br>
+        📐 تشطيب احترافي<br>
+        🛡️ وضمان على العمل والمواد<br>
+
+
+      </p>
+    </div>
+    <div class="section">
+      <h2>💼 اكتشف قوة الشي بورد – الحل الذكي لأناقة تدوم 💼
+      </h2>
+      <h3>الشي بورد – الاختيار الأول للمهندسين والمصممين المحترفين!</h3>
+      <p>✅ مقاوم للرطوبة والحريق – لا تتأثر بالرطوبة ولا تنكسر بسهولة، مثالي للحمامات، المطابخ، والأسطح الخارجية. <br>
+        ✅ تحمل عالٍ ومتانة استثنائية – لا يتشقق ولا يتقوس، حتى في أقسى الظروف المناخية. <br>
+        ✅ مرونة في التصميم – يصلح للجدران، الأسقف، الأرضيات، والديكورات الحديثة، ويُطلى بأي لون لتناسب ذوقك. <br>
+        ✅ عزل حراري وصوتي ممتاز – راحة في كل زاوية، وعزل مثالي لمزيد من الخصوصية. <br>
+        ✅ مناسب للواجهات الخارجية – مظهر أنيق وعمر افتراضي طويل، حتى في مواجهة الشمس والمطر.</p>
+    </div>
+
+
+
+
+
+
+    <div class="section">
+      <h2>🔥 مقاوم للحريق والرطوبة</h2>
+      <h3>📏 السماكات المتوفرة:</h3>
+      <h4>نحن نوفّر الشي بورد بعدة سماكات لتناسب مختلف أنواع الاستخدامات:</h4>
+      <table style=" width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;">
+        <thead style="background-color: #b82424;">
+          <tr>
+            <th style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">السماكة</th>
+            <th style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">الاستخدامات</th>
+            <th style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">أماكن التركيب</th>
+            <th style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">التركيب على</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="      background-color: #f2f2f2;">
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">6 مم</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">ديكورات داخلية خفيفة</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">الجدران الجافة، الممرات</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">هياكل معدنية، جدران خفيفة</td>
+          </tr>
+          <tr>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">8 مم</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">جدران داخلية متوسطة التحمل</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">المكاتب، غرف النوم</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">معدن مجلفن، ألواح خشب معالجة</td>
+          </tr>
+          <tr style="      background-color: #f2f2f2;">
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">10 مم</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">أسقف مقاومة للرطوبة</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">الحمامات، المطابخ</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">سقف معدني، عوارض</td>
+          </tr>
+          <tr>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">12 مم</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">واجهات خارجية، أرضيات تحت السيراميك</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">الفلل، المشاريع التجارية</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">هيكل حديد، خرسانة، خشب</td>
+          </tr>
+          <tr style="      background-color: #f2f2f2;">
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">16 مم</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">تحمّل عالي للأوزان</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">المدارس، المستشفيات، الأرضيات</td>
+            <td style=" border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;">قواعد معدنية قوية، بلاطة خرسانية</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section">
+      <h2>🌟 لماذا نحن؟</h2>
+      <p>
+
+        🔸 تفاصيل مدروسة<br>
+        🔸 خامات معتمدة<br>
+        🔸 أفكار مبتكرة<br>
+        🔸 فريق هندسي بخبرة عالية<br>
+        🔸 ضمان جودة بعد التركيب<br>
+      </p>
+    </div>
+    <div class="section image-gallery">
+      <h2>بعض من منتجاتنا</h2>
+      <div class="image-grid">
+        <img src="snaplytics.io_photo_4.jpg" alt="واجه شيبورد 1">
+        <img src="Gvz7LStXwAAV5C-.jpeg" alt="واجه شيبورد 2">
+        <img src="تركيب-بديل-الخشب-بالرياض-_38339074_-__.jpg" alt="واجه شيبورد 3">
+
+
+      </div>
+    </div>
+  </div>
+
+   <div class="whatsapp-footer">
+    <footer class="footer-bar">
+      <div class="footer-content">
+        <div class="about-section">
+         <table
+            style="width: 100%; border-collapse: collapse; text-align: right; direction: rtl; font-family: 'Cairo', sans-serif;">
+            <tr>
+              <th colspan="2" style="background-color: #333; color: white; font-size: 24px; padding: 10px;">
+                من نحن
+              </th>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size: 20px; font-weight: bold; padding: 10px;">
+                مصنع أحمد العاروري لصناعة اكسسوارات الديكور
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size: 20px; font-weight: bold; padding: 10px;">
+                نحن في مصنع أحمد العاروري نُعنى بصناعة وتوريد إكسسوارات الديكور عالية الجودة، ونقدّم مجموعة متكاملة من
+                المنتجات تشمل:
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul style="font-size: 20px; font-weight: bold; padding: 10px;">
+                  <li><a href="زوايا.html" style="color: #ffffff; text-decoration: none">الزوايا</a></li>
+                  <li><a href="اتركات.html" style="color: #ffffff; text-decoration: none">التراكات</a></li>
+                  <li><a href="سيات.html" style="color: #ffffff; text-decoration: none">سيّات</a></li>
+                  <li><a href="امقا.html" style="color: #ffffff; text-decoration: none">الأمجا</a></li>
+                  <li><a href="بديل-الواجهات -الخارجيه.html" style="color: #ffffff; text-decoration: none">اسمنت مرن</a>
+                  </li>
+                  <li><a href="كورنر تب .html" style="color: #ffffff; text-decoration: none">كورنر تب</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul style="font-size: 20px; font-weight: bold; padding: 10px;">
+                  <li><a href="بلاط بلاسك .html" style="color: #ffffff; text-decoration: none">البلاط البلاستيكي</a>
+                  </li>
+                  <li><a href="جبسمبورد .html" style="color: #ffffff; text-decoration: none">ألواح الجبس</a>
+                  </li>
+                  <li><a href="red-het.html" style="color: #ffffff; text-decoration: none"> مسامير بانواعه وفشق</a></li>
+                  <li><a href="شي بور .html" style="color: #ffffff; text-decoration: none">شي بورد </a> </li>
+                  <li><a href="بديل-خشب .html" style="color: #ffffff; text-decoration: none">بديل خشب</a></li>
+                  <li><a href="ستدات.html" style="color: #ffffff; text-decoration: none">ستدات</a></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="whatsapp-contacts">
+          <h3 class="contact-title">تواصل معنا عبر واتساب:</h3>
+          <div class="whatsapp-buttons">
+            <a href="https://wa.me/962795704514" class="whatsapp-btn"><span>0795704514</span></a>
+            <a href="https://wa.me/962782342105" class="whatsapp-btn"><span>0782342105</span></a>
+            <a href="https://wa.me/962797083878" class="whatsapp-btn"><span>0797083878</span></a>
+          </div>
+        </div>
+        
+        <div class="instagram-contacts">
+          <h3 class="contact-title">تواصل معنا عبر انستقرام:</h3>
+          <div class="instagram-buttons">
+            <a href="https://www.instagram.com/ahmad_factory.jo?igsh=MWdsb2xjZDYyZHNn" class="instagram-btn"><span>انقر هنا</span></a>
+          </div>
+        </div>
+
+        <div class="facebook-contacts">
+          <h3 class="contact-title">تواصل معنا عبر الفيسبوك :</h3>
+          <div class="facebook-buttons">
+            <a href="https://web.facebook.com/profile.php?id=61578719541837" class="facebook-btn"><span>انقر هنا</span></a>
+          </div>
+        </div>
+        
+        <div class="lcaion-contacts">
+          <h3 class="contact-title">موقعنا:</h3>
+          <div class="lcaion-buttons">
+            <a href="https://www.google.com/maps/place/%D9%85%D8%B5%D9%86%D8%B9+%D8%A3%D8%AD%D9%85%D8%AF+%D8%A7%D9%84%D8%B9%D8%A7%D8%B1%D9%88%D8%B1%D9%8A+%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D8%A7%D9%83%D8%B3%D8%B3%D9%88%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D8%AF%D9%8A%D9%83%D9%88%D8%B1%E2%80%AD/@32.01036,36.0417616,16z/data=!3m1!4b1!4m6!3m5!1s0x151b677ec03f39bd:0xb596e6d413f9ffc!8m2!3d32.0099779!4d36.039074!16s%2Fg%2F11h_ccvgdv?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D" 
+               class="lcaion-btn"><span>انقر هنا</span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

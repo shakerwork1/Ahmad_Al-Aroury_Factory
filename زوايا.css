@@ -1,0 +1,112 @@
+.whatsapp-footer {
+       background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin: 0; /* بدون مارجن للبنر */
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px; /* خط أصغر قليلاً إذا أحببت */
+    }
+
+
+.footer-bar {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #333;
+}
+
+.about-section {
+    flex: 2;
+    min-width: 300px;
+    padding: 0 15px;
+}
+
+.whatsapp-contacts {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.whatsapp-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    width: fit-content;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn span {
+    position: relative;
+    padding-right: 5px;
+}
+
+.whatsapp-btn span::before {
+    content: "";
+    background-image: url('data:image/svg+xml;base64,...'); /* لم يتغير */
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* متجاوب مع الجوال */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section,
+    .whatsapp-contacts {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .whatsapp-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
