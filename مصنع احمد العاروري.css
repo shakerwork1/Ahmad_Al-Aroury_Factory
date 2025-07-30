@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    background-color: #ffffff00;
+    color:  #000000;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1.h11 {
+    color: #da914d;
+    text-wrap: nowrap;
+    width: 20ch;
+    overflow: hidden;
+    animation: typing 7s steps(20) infinite alternate-reverse;
+}
+
+@keyframes typing {
+    from {
+
+        width: 0ch;
+    }
+}
+
+h1.h {
+    color: #da914d;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* صورة أو عناصر داخل شبكة دائرية */
+.imgoll {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 100px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#img1,
+#img2,
+#img3,
+#img4,
+#img5,
+#img6,
+#img7,
+#img8,
+#img9,
+#img10,
+#img11,
+#img12 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* خلفية فيديو */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -1;
+
+    pointer-events: none; /* حتى لا يعيق التفاعل مع المحتوى */
+}
+
+
+/* الفوتر */
+.whatsapp-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    /* بدون مارجن للبنر */
+    position: relative;
+
+    width: 100%;
+    font-size: 14px;
+    /* خط أصغر قليلاً إذا أحببت */
+}
+
+
+.footer-bar {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #333;
+}
+
+.about-section {
+    flex: 2;
+    min-width: 300px;
+    padding: 0 15px;
+    text-align: right;
+}
+
+.whatsapp-contacts {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.whatsapp-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn span {
+
+    padding-right: 5px;
+}
+
+
+
+/* متجاوب مع الجوال */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section,
+    .whatsapp-contacts {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .whatsapp-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+
+.instagram-contacts {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.instagram-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.instagram-btn {
+    background-color: #6d028a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+.instagram-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-btn span {
+    padding-right: 5px;
+}
+
+.top-banner {
+    width: 70%;
+    height: 3000px;
+    object-fit: cover;
+    /* لقص الصورة بشكل مناسب */
+    display: block;
+}
+
+.instagram-contacts {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.top-banner {
+    width: 100%;
+    height: 3000px;
+    object-fit: cover;
+    /* لقص الصورة بشكل مناسب */
+    display: block;
+}
+
+.facebook-contacts {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.facebook-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.facebook-btn {
+    background-color: #0222b2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+.facebook-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.facebook-btn span {
+    padding-right: 5px;
+}
+
+
+
+.lcaion-contacts {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 15px;
+}
+
+.lcaion-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.lcaion-btn {
+    background-color: #851b06;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+.lcaion-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lcaion-btn span {
+    padding-right: 5px;
+}
