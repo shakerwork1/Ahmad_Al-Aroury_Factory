@@ -5,247 +5,248 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>امجا - مصنع أحمد العاروري</title>
- <style>
+  <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-      direction: rtl;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-      margin-bottom: 0;
-    }
-
-    .header {
-      background-color: #b82424;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .section {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      margin-top: 0;
-    }
-
-    /* ====== Image Gallery ====== */
-    .image-gallery {
-      text-align: center;
-    }
-
-    .image-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .image-grid img {
-      width: 280px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .image-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    /* الفوتر المعدل */
-    .whatsapp-footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      margin: 0;
-      position: relative;
-      width: 100%;
-      font-size: 14px;
-    }
-
-    .footer-bar {
-      max-width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 0;
-      background-color: #333;
-      margin: 0;
-    }
-
-    .about-section {
-      flex: 2;
-      min-width: 300px;
-      padding: 15px;
-      text-align: right;
-    }
-
-    .whatsapp-contacts, 
-    .instagram-contacts,
-    .facebook-contacts,
-    .lcaion-contacts {
-      flex: 1;
-      min-width: 250px;
-      text-align: center;
-      padding: 15px;
-    }
-
-    .contact-title {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-
-    .whatsapp-buttons,
-    .instagram-buttons,
-    .facebook-buttons,
-    .lcaion-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 17px;
-      display: flex;
-      align-items: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      width: fit-content;
-    }
-
-    .instagram-btn {
-      background-color: #6d028a;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 17px;
-      display: flex;
-      align-items: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      width: fit-content;
-    }
-
-    .facebook-btn {
-      background-color: #0222b2;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 17px;
-      display: flex;
-      align-items: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      width: fit-content;
-    }
-
-    .lcaion-btn {
-      background-color: #851b06;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 17px;
-      display: flex;
-      align-items: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      width: fit-content;
-    }
-
-    .whatsapp-btn:hover,
-    .instagram-btn:hover,
-    .facebook-btn:hover,
-    .lcaion-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .whatsapp-btn span,
-    .instagram-btn span,
-    .facebook-btn span,
-    .lcaion-btn span {
-      padding-right: 5px;
-    }
-
-    /* متجاوب مع الجوال */
-    @media (max-width: 768px) {
-      .image-grid img {
-        width: 90%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Cairo', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        direction: rtl;
+        overflow-x: hidden;
       }
-
-      .footer-content {
-        flex-direction: column;
+  
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 30px 20px;
+        margin-bottom: 0;
+      }
+  
+      .header {
+        background-color: #b82424;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+  
+      .section {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        line-height: 1.8;
+      }
+  
+      h1, h2 {
+        margin-top: 0;
+      }
+  
+      /* ====== Image Gallery ====== */
+      .image-gallery {
         text-align: center;
       }
-
-      .about-section,
-      .whatsapp-contacts,
+  
+      .image-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+  
+      .image-grid img {
+        width: 280px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+  
+      .image-grid img:hover {
+        transform: scale(1.05);
+      }
+  
+      /* الفوتر المعدل */
+      .whatsapp-footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+      }
+  
+      .footer-bar {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        background-color: #333;
+        margin: 0;
+      }
+  
+      .about-section {
+        flex: 2;
+        min-width: 300px;
+        padding: 15px;
+        text-align: right;
+      }
+  
+      .whatsapp-contacts, 
       .instagram-contacts,
       .facebook-contacts,
       .lcaion-contacts {
-        width: 100%;
-        margin-bottom: 20px;
+        flex: 1;
+        min-width: 250px;
+        text-align: center;
+        padding: 15px;
       }
-
+  
+      .contact-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+  
       .whatsapp-buttons,
       .instagram-buttons,
       .facebook-buttons,
       .lcaion-buttons {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
       }
-    }
-  </style>
+  
+      .whatsapp-btn {
+        background-color: #25D366;
+        color: white;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+      }
+  
+      .instagram-btn {
+        background-color: #6d028a;
+        color: white;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+      }
+  
+      .facebook-btn {
+        background-color: #0222b2;
+        color: white;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+      }
+  
+      .lcaion-btn {
+        background-color: #851b06;
+        color: white;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+      }
+  
+      .whatsapp-btn:hover,
+      .instagram-btn:hover,
+      .facebook-btn:hover,
+      .lcaion-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+  
+      .whatsapp-btn span,
+      .instagram-btn span,
+      .facebook-btn span,
+      .lcaion-btn span {
+        padding-right: 5px;
+      }
+  
+      /* متجاوب مع الجوال */
+      @media (max-width: 768px) {
+        .image-grid img {
+          width: 90%;
+        }
+  
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+  
+        .about-section,
+        .whatsapp-contacts,
+        .instagram-contacts,
+        .facebook-contacts,
+        .lcaion-contacts {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+  
+        .whatsapp-buttons,
+        .instagram-buttons,
+        .facebook-buttons,
+        .lcaion-buttons {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
 </head>
 
 <body>
 
   <!-- Logo in top right corner -->
-  <a href="مصنع.html    " class="top-left-image">
-    <img src="شاعر المصنع.png" alt="شعار المصنع"
-      style="width: 300px; height: auto; position: absolute; top: 0; right: 0;">
-  </a>
+  <div style="text-align: center; margin: 20px 0;">
+    <a href="index.html">
+      <img src="شاعر المصنع.png" alt="شاعر المصنع" style="width: 300px; height: auto;">
+    </a>
+  </div>
 
   <!-- Main Content -->
   <div class="container">
@@ -361,7 +362,7 @@
          <table
             style="width: 100%; border-collapse: collapse; text-align: right; direction: rtl; font-family: 'Cairo', sans-serif;">
             <tr>
-              <th colspan="2" style="background-color: #333; color: white; font-size: 24px; padding: 10px;">
+              <th colspan="2" style="background-color: #333; color: white; font-size: 24px; ">
                 من نحن
               </th>
             </tr>
@@ -438,5 +439,4 @@
     </footer>
   </div>
 </body>
-
 </html>
