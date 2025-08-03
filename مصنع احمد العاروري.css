@@ -8,7 +8,10 @@
 body {
     font-family: 'Cairo', sans-serif;
     direction: rtl;
-    background-color: #ffffff00;
+    background-image: url('Gemini_Generated_Image_exe78wexe78wexe7.png'); /* اسم أو مسار الصورة */
+    background-size: cover; /* لجعل الصورة تغطي كامل الصفحة */
+    background-position: center;
+    background-repeat: no-repeat;
     color:  #000000;
     line-height: 1.6;
     padding: 20px;
